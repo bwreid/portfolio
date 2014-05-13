@@ -1,0 +1,129 @@
+@import 'foundation';
+
+@mixin transitions($seconds) {
+  -webkit-transition: all $seconds ease-in-out;
+  -moz-transition: all $seconds ease-in-out;
+  -o-transition: all $seconds ease-in-out;
+  transition: all $seconds ease-in-out;
+}
+
+section#portfolio { @include grid-row(); }
+
+#header {
+  background: #BCDFBA;
+  border-top: 5px solid darken(#BCDFBA, 20%);
+  border-bottom: 5px solid $secondary-color;
+  .title {
+    h1 {
+      color: white;
+      line-height: 100%;
+      @media #{$large-up} { font-size: rem-calc(124px); }
+      @media #{$medium-only} { font-size: rem-calc(88px); }
+      @media #{$small-only} { font-size: rem-calc(44px); }
+      opacity: 0;
+      text-align: center;
+    }
+    h3 {
+      @media #{$medium-up} { font-size: rem-calc(44px); }
+      @media #{$small-only} { font-size: rem-calc(22px); }
+      opacity: 0;
+      text-align: center;
+    }
+  }
+}
+
+nav {
+  @media #{$small-only} { display: none; }
+  ul {
+    list-style: none;
+    margin: rem-calc(35px) auto 0;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    padding: 5px 15px;
+    a {
+      color: #4d4d4d;
+      letter-spacing: 1px;
+      opacity: 0.5;
+      font-weight: 400;
+      text-transform: uppercase;        
+    }
+    a:hover {
+      color: #4d4d4d;
+      opacity: 0.9;
+    }
+  }
+}
+
+#about {
+  margin-bottom: rem-calc(100px);
+  padding-top: rem-calc(200px);
+  @media #{$small-only} { padding-top: rem-calc(150px); }
+  img#selfie {
+    @media #{$medium-up} { border-radius: 50%; }
+    position: relative;
+    top: rem-calc(-50px);
+    left: rem-calc(-999px);
+    
+    -webkit-transform: rotate(-300deg);
+    -moz-transform: rotate(-300deg);
+    -o-transform: rotate(-300deg);
+    transform: rotate(-300deg);
+
+    @include transitions(1s);
+
+    &.roll {
+      left: 0;
+
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+}
+
+#portfolio {
+  padding: rem-calc(100px) 0 rem-calc(200px);
+  
+  img {
+    padding: 100px;
+    @include transitions(0.5s); 
+  }
+
+  .hide { display: none; }
+  &.faded { opacity: 0.2; }
+}
+
+#top {
+  bottom: 0;
+  display: block;
+  left: 50px;
+  opacity: 0;
+  padding-bottom: 35px;
+  position: fixed;
+  text-align: center;
+  width: 50px;
+  a { color: lighten($body-font-color, 20%); font-size: rem-calc(45px); }
+}
+
+footer {
+  background: $body-font-color;
+  padding: rem-calc(30px) 0;
+  #contact, #social {
+    h4 {
+      color: white;
+      text-transform: uppercase;
+    }
+    ul { margin-left: 0; }
+    li {
+      display: inline-block;
+    }
+    a {
+      color: lighten($body-font-color, 20%);
+      margin-right: 15px;
+    }
+    a:hover { color: lighten($body-font-color, 35%); }    
+  }
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B. Wes Reid - Developer // Designer</title>
+    <link rel="stylesheet" href="stylesheets/css/main.css" />
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.css" />
+    <link rel="stylesheet" href="vendor/fancybox/helpers/jquery.fancybox-thumbs.css" />
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="title">
+        <h1>Wes Reid</h1>
+        <h3>Developer // Designer</h3>
+      </div>
+    </section>
+    <nav>
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="about" class="row">
+      <div class="large-4 large-offset-0 medium-6 medium-offset-3 small-6 small-offset-3 columns">
+        <img id="selfie" src="img/selfie.jpg"/>
+      </div>
+      <div class="large-8 columns">
+        <p>Hi there. My name is Wes. I'm a web developer and designer located in New York and Denver, currently working at <a href="http://www.turbovote.org">TurboVote</a>.</p>
+        <p>I know Ruby/Rails, JS/Coffee, CSS/SCSS, HTML5, and a little bit of Clojure. In short, I can make you a sweet website that looks good and runs nicely.</p>
+        <p>Interested in chatting?</p>
+        <a href="#contact"><button class="small secondary">Get in Touch</button></a>
+      </div>
+    </section>
+    <section id="portfolio" class="faded">
+      <div class="row">
+        <div class="large-12 medium-10 medium-centered columns">
+          <ul class="clearing-thumbs large-block-grid-3 medium-block-grid-3 small-block-grid-2" data-clearing>
+            <li><a href="img/portf-4d.png" class="fancybox-thumb" rel="gallery" title="Redesigned frontpage of Aftersteps.com to call attention to new video"><img src="img/portf-4.png"></a></li>
+            <a class="fancybox-thumb hide" rel="gallery" title="Site is mobile responsive for all screen sizes"><img src="img/portf-4b.png"></a>
+            <a class="fancybox-thumb hide" rel="gallery" title="Responsive email templates were also designed"><img src="img/portf-4c.png"></a>
+            <li><a href="img/portf-1c.jpg" class="fancybox-thumb" rel="gallery" title="Partnership flyers on how companies can support New York Needs You"><img src="img/portf-1.png"></a></li>
+            <a class="fancybox-thumb hide" rel="gallery" title="Partnership flyers were a key asset for meetings with donating companies"><img src="img/portf-1b.jpg"></a>
+            <li><a href="img/portf-5c.png" class="fancybox-thumb" rel="gallery" title="Portfolio site created for the third Web Development Immersive class"><img src="img/portf-5.png"></a></li>
+            <a class="fancybox-thumb hide" rel="gallery" title="Site features projects made during the class"><img src="img/portf-5b.png"></a>
+            <li><a href="img/portf-3b.jpg" class="fancybox-thumb" rel="gallery" title="Marketing posters designed for the Find and Follow Your Passion conference"><img src="img/portf-3.png"></a></li>
+            <a class="fancybox-thumb hide" rel="gallery" title="Posters were designed with famous quotes to be as shareable as possible"><img src="img/portf-3c.jpg"></a>
+            <li><a href="img/portf-2b.png" class="fancybox-thumb" rel="gallery" title="Career Catch is a fully responsive online career guide"><img src="img/portf-2.png"></a></li>
+            <a class="fancybox-thumb hide" rel="gallery" title="Users are asked a variety of easy questions which guide them to various careers"><img src="img/portf-2c.png"></a>
+            <a class="fancybox-thumb hide" rel="gallery" title="Once answering some questions, they're able to explore careers in a variety of ways"><img src="img/portf-2d.png"></a>
+            <li><a href="img/portf-6b.png" class="fancybox-thumb" rel="gallery" title="A personal site set up for Sarah D. and her pilates classes in Hawaii"><img src="img/portf-6.png"></a></li>
+            <a class="fancybox-thumb hide" rel="gallery" title="Site was created with an implemented Wordpress theme to reduce costs"><img src="img/portf-6c.png"></a>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div id="top" class="hide-for-medium-down">
+      <a href="#header">^</a>
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="large-6 medium-6 columns">
+          <section id="contact">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">(347) 450-2435</a></li>
+              <li><a href="mailto:bwreid@gmail.com">bwreid@gmail.com</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="large-6 medium-6 columns">
+          <section id="social">
+            <h4>Social</h4>
+            <ul>
+              <li><a href="http://twitter.com/bwreid">twitter</a></li>
+              <li><a href="http://linkedin.com/in/bwreid">linkedin</a></li>
+              <li><a href="http://github.com/bwreid">github</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/jquery.js"></script>
+    <script src="vendor/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="vendor/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+    
+    <script src="js/foundation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).foundation();
+      
+      $('.fancybox-thumb').fancybox({
+        prevEffect  : 'none',
+        nextEffect  : 'none',
+        helpers : {
+          thumbs  : {
+            width : 50,
+            height  : 50
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
