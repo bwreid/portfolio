@@ -3450,46 +3450,49 @@ nav li {
     color: #4d4d4d;
     opacity: 0.9; }
 
-#about {
-  margin-bottom: 5.55556rem;
-  padding-top: 11.11111rem; }
+@media only screen and (min-width: 40.063em) {
+  #about {
+    margin-bottom: 5.55556rem;
+    padding-top: 11.11111rem; } }
+@media only screen and (max-width: 40em) {
+  #about {
+    padding-top: 2.77778rem;
+    text-align: center; } }
+#about img#selfie {
+  position: relative;
+  top: -2.77778rem;
+  left: -55.5rem;
+  -webkit-transform: rotate(-300deg);
+  -moz-transform: rotate(-300deg);
+  -o-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  @media only screen and (min-width: 40.063em) {
+    #about img#selfie {
+      border-radius: 50%; } }
   @media only screen and (max-width: 40em) {
-    #about {
-      padding-top: 8.33333rem; } }
-  #about img#selfie {
-    position: relative;
-    top: -2.77778rem;
-    left: -55.5rem;
-    -webkit-transform: rotate(-300deg);
-    -moz-transform: rotate(-300deg);
-    -o-transform: rotate(-300deg);
-    transform: rotate(-300deg);
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out; }
-    @media only screen and (min-width: 40.063em) {
-      #about img#selfie {
-        border-radius: 50%; } }
-    #about img#selfie.roll {
-      left: 0;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg); }
+    #about img#selfie {
+      display: none; } }
+  #about img#selfie.roll {
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
 
 #portfolio {
   padding: 5.55556rem 0 11.11111rem; }
+  @media only screen and (max-width: 40em) {
+    #portfolio {
+      padding: 2.77778rem 0; } }
   #portfolio img {
-    padding: 100px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
-  #portfolio .hide {
-    display: none; }
-  #portfolio.faded {
-    opacity: 0.2; }
 
 #top {
   bottom: 0;

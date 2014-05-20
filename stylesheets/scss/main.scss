@@ -57,11 +57,17 @@ nav {
 }
 
 #about {
-  margin-bottom: rem-calc(100px);
-  padding-top: rem-calc(200px);
-  @media #{$small-only} { padding-top: rem-calc(150px); }
+  @media #{$medium-up} {
+    margin-bottom: rem-calc(100px);
+    padding-top: rem-calc(200px);
+  }
+  @media #{$small-only} {
+    padding-top: rem-calc(50px);
+    text-align: center;
+  }
   img#selfie {
     @media #{$medium-up} { border-radius: 50%; }
+    @media #{$small-only} { display: none; }
     position: relative;
     top: rem-calc(-50px);
     left: rem-calc(-999px);
@@ -86,14 +92,10 @@ nav {
 
 #portfolio {
   padding: rem-calc(100px) 0 rem-calc(200px);
-  
+  @media #{$small-only} { padding: rem-calc(50px) 0; }
   img {
-    padding: 100px;
     @include transitions(0.5s); 
   }
-
-  .hide { display: none; }
-  &.faded { opacity: 0.2; }
 }
 
 #top {

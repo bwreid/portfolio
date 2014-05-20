@@ -10,7 +10,6 @@ $(function(){
   $( window ).scroll( function() {
     fadeElements();
     iWokeUpLikeThis();
-    growPortfolioBoxes();
   } ); // On scroll
 
   function setupHeader() {
@@ -38,13 +37,6 @@ $(function(){
     if( $(window).scrollTop() > ( $('#about').position()["top"] - 450 ) ) {
       $( 'img#selfie' ).addClass('roll');
     }
-  }
-
-  function growPortfolioBoxes() {
-   if( $(window).scrollTop() > ( $('#portfolio').position()["top"] - 350 ) ) {
-      $( '#portfolio' ).removeClass('faded');
-      $('#portfolio').find('img').css('padding','0');
-    } 
   }
 
   function smoothScrolling() {
