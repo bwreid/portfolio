@@ -3522,3 +3522,7 @@ footer {
     margin-right: 15px; }
   footer #contact a:hover, footer #social a:hover {
     color: #a6a6a6; }
+
+@media only screen and (max-width: 40em) {
+  .fancybox-title {
+    display: none; } }
